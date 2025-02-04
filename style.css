@@ -72,11 +72,17 @@ body * {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
+  animation: slide-out 0.4s forwards;
+}
+#switch button:hover {
+  outline: 8px solid var(--stroke-color);
 }
 .light #switch button {
-  left: 0;
+  animation: slide-in 0.4s forwards;
+}
+.light #switch button:hover{
+  outline: 8px solid var(--stroke-color);
 }
 #switch span {
   display: block;
@@ -144,5 +150,21 @@ footer {
   }
   body {
     margin: auto;
+  }
+}
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+@keyframes slide-out {
+  from{
+    left: 50%
+  }
+  to{
+    left: 0;
   }
 }
