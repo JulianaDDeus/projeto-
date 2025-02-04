@@ -142,4 +142,7 @@ footer {
   .light {
     --bg-url: url(./assets/background\ light\ notebook.jpg);
   }
+  body {
+    margin: auto;
+  }
 }
